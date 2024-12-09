@@ -2,12 +2,12 @@
 import { useContext, useState } from 'react';
 import PopUpModal from '../PopUpModal/PopUpModal';
 import Login from './Login';
-import {useNavigate } from 'react-router-dom';
+import {useNavigate, useParams } from 'react-router-dom';
 import { dataContextProvider } from '../Store/data-store';
 
 const LoginPage = () => {
-
   const [popup,setPopup] = useState()
+  let {userId} = useParams();
   const {loginList} = useContext(dataContextProvider)
   const navigate  = useNavigate()
 
@@ -26,7 +26,8 @@ const LoginPage = () => {
     loginInfo = "Warning: Please use a valid email Address"
   }
   else{
-    navigate("/userprofile")
+    userId = email.split("@")[0]
+    navigate(`/userprofile/${userId}`)
   }
   
   function handlePopup(){

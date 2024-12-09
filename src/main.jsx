@@ -6,6 +6,7 @@ import App from './App.jsx'
 import LoginPage from './component/LoginPage/LoginPage.jsx'
 import SignupPage from './component/SignupPage/SignupPage.jsx'
 import UserProfile from './component/Profile/UserProfile.jsx'
+import { User } from 'lucide-react'
 
 
 const route = createBrowserRouter(
@@ -13,7 +14,7 @@ const route = createBrowserRouter(
     <Route path='/' element={<App/>}>
       <Route path='' element={<LoginPage/>} />
       <Route path='sign-up' element={<SignupPage/>}/>
-      <Route path='userprofile' element={<UserProfile/>}/>
+      <Route path='userprofile/:userId' element={<UserProfile/>}/>
     </Route>
   )
 )

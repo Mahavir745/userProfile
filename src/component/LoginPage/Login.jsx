@@ -24,7 +24,7 @@ const Login = ({popup,setPopup}) => {
 
   return (
     <div className='h-[auto] mb-5'>
-    <form className='border mt-4 w-[380px] md:w-[580px] h-[400px] m-auto' onSubmit={(e) => HandleLogin(e)}>
+    <form className='border mt-4 w-[360px] md:w-[580px] h-[400px] m-auto' onSubmit={(e) => HandleLogin(e)}>
       <h2 className='bg-green-700 text-white text-[32px] text-center'>Login</h2>
       <div className='w-[300px] md:w-[500px] mt-3 rounded p-2 flex flex-col border m-auto'>
         <label htmlFor="userId" className='block'>Enter Your Email Id: </label>
